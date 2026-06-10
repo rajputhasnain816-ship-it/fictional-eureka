@@ -1,6 +1,6 @@
 # Fictional Eureka - Collection of Interactive Pygame Applications
 
-A collection of interactive Python applications built with Pygame, featuring a car driving simulator and a world digital clock.
+A comprehensive collection of interactive Python applications built with Pygame, featuring games, tools, and utilities.
 
 ## Projects Included
 
@@ -56,6 +56,98 @@ python digital_clock_timezones.py
 
 ---
 
+### 3. 🌦️ Weather Dashboard
+A real-time weather dashboard fetching data from OpenWeatherMap API displaying weather for 6 major cities.
+
+**Features:**
+- Real-time weather data from OpenWeatherMap API
+- 6 global cities with weather information
+- Current temperature, feels like, humidity, pressure, wind speed
+- Weather description with emoji icons
+- Detailed weather cards for quick info
+- Interactive city selector buttons
+- Auto-refresh every 60 seconds
+- Manual refresh with R key
+
+**Included Cities:**
+- 🗽 New York
+- 🇬🇧 London
+- 🗾 Tokyo
+- 🇦🇺 Sydney
+- 🇦🇪 Dubai
+- 🌴 Los Angeles
+
+**Run:**
+```bash
+python weather_dashboard.py
+```
+
+**Controls:**
+- **Mouse Click** - Select different cities
+- **R Key** - Manual refresh
+- Auto-updates every minute
+
+---
+
+### 4. 😂 Random Joke Generator
+A fun joke generator with multiple API sources and a favorites system.
+
+**Features:**
+- Multiple joke API sources (Official Joke API, JokeAPI, Random User Jokes)
+- Random joke generation
+- Favorites system (save your funny jokes!)
+- Joke history tracking (last 50 jokes)
+- Statistics dashboard
+- Color-coded joke categories
+- Interactive UI with easy controls
+
+**Run:**
+```bash
+python joke_generator.py
+```
+
+**Controls:**
+- **SPACE** - Generate new joke
+- **Mouse Click** - Navigate buttons
+- **"🔄 Next Joke"** - Get a new joke
+- **"❤️ Favorite"** - Save to favorites
+- **"📜 History"** - View past jokes
+- **ESC** - Close history popup
+
+---
+
+### 5. ✓ To-Do List Application
+A full-featured to-do list application with local JSON storage and task management.
+
+**Features:**
+- Add, complete, and delete tasks
+- Task priority levels (Low, Normal, High)
+- Color-coded priority indicators
+- Filter tasks (All, Active, Completed)
+- Sort tasks (By Date, By Priority)
+- Task statistics dashboard
+- Local JSON file storage (automatic save/load)
+- Persistent data between sessions
+- Task creation with timestamps
+- Keyboard and mouse controls
+
+**Run:**
+```bash
+python todo_app.py
+```
+
+**Controls:**
+- **Click on input box** - Add new task
+- **Type task name** - Enter task description
+- **ENTER** - Save task
+- **Click priority buttons** - Set priority level
+- **Click checkbox** - Mark task complete
+- **Click ✕** - Delete task
+- **Click filter buttons** - Filter view
+- **Click sort buttons** - Change sort order
+
+---
+
 ## Installation
 
 1. Clone the repository:
@@ -74,16 +166,38 @@ pip install -r requirements.txt
 - Python 3.7+
 - Pygame 2.5.0
 - pytz 2024.1
+- requests 2.31.0
 
 ## Project Structure
 
 ```
 fictional-eureka/
-├── simple_car_prototype.py       # Car driving simulator
-├── digital_clock_timezones.py    # World clock application
+├── simple_car_prototype.py       # 🚗 Car driving simulator
+├── digital_clock_timezones.py    # ⏰ World clock
+├── weather_dashboard.py          # 🌦️ Weather dashboard
+├── joke_generator.py             # 😂 Joke generator
+├── todo_app.py                   # ✓ To-do list
+├── todos.json                    # 💾 Task storage (auto-created)
 ├── requirements.txt              # Python dependencies
 └── README.md                     # This file
 ```
+
+## Data Storage
+
+- **To-Do List**: Tasks are automatically saved to `todos.json` in the application directory
+- **Joke History**: Stored in memory during the session
+- **Weather Data**: Fetched in real-time, no local storage
+
+## Features by Application
+
+| Feature | Car | Clock | Weather | Jokes | To-Do |
+|---------|-----|-------|---------|-------|-------|
+| Real-time Data | - | ✓ | ✓ | - | ✓ |
+| Local Storage | - | - | - | Memory | JSON |
+| API Integration | - | - | ✓ | ✓ | - |
+| Interactive UI | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Multiple Items | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Statistics | - | - | ✓ | ✓ | ✓ |
 
 ## Future Enhancements
 
@@ -101,6 +215,29 @@ fictional-eureka/
 - [ ] Weather integration
 - [ ] Geolocation-based timezone auto-detection
 
+### Weather Dashboard:
+- [ ] 5-day forecast
+- [ ] Weather alerts
+- [ ] More cities (customizable)
+- [ ] Historical weather data
+- [ ] UV index information
+
+### Joke Generator:
+- [ ] Joke categories (programming, knock-knock, etc.)
+- [ ] Joke sharing functionality
+- [ ] Export favorites
+- [ ] Dark/Light theme toggle
+- [ ] Multilingual jokes
+
+### To-Do List:
+- [ ] Due date reminders
+- [ ] Task categories/tags
+- [ ] Cloud synchronization
+- [ ] Recurring tasks
+- [ ] Export to CSV
+- [ ] Search functionality
+- [ ] Dark/Light theme toggle
+
 ## License
 
 MIT License - Feel free to use and modify!
@@ -112,3 +249,20 @@ rajputhasnain816-ship-it
 ## Contributing
 
 Feel free to fork, modify, and submit pull requests to improve these projects!
+
+## Getting Started
+
+1. **Clone the repo** and install dependencies
+2. **Pick an application** and run it:
+   ```bash
+   python simple_car_prototype.py
+   python digital_clock_timezones.py
+   python weather_dashboard.py
+   python joke_generator.py
+   python todo_app.py
+   ```
+3. **Enjoy!** Each application is self-contained and ready to use.
+
+---
+
+**Happy coding! 🚀**
